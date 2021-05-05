@@ -47,28 +47,73 @@ public class Register extends javax.swing.JFrame {
         jTextFieldDocument = new javax.swing.JTextField();
         jTextFieldPasword = new javax.swing.JTextField();
         BTNLogin = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(480, 480));
+        setMinimumSize(new java.awt.Dimension(480, 480));
+        setPreferredSize(new java.awt.Dimension(480, 480));
+
+        jPanel1.setMaximumSize(new java.awt.Dimension(480, 480));
+        jPanel1.setMinimumSize(new java.awt.Dimension(480, 480));
+        jPanel1.setPreferredSize(new java.awt.Dimension(480, 480));
+        jPanel1.setLayout(null);
 
         jLabelUserName.setText("Nombre de Usuario: ");
+        jPanel1.add(jLabelUserName);
+        jLabelUserName.setBounds(52, 34, 115, 16);
 
         jLabelNames.setText("Nombres: ");
+        jPanel1.add(jLabelNames);
+        jLabelNames.setBounds(52, 76, 58, 16);
 
         jLabelLastNames.setText("Apellidos: ");
+        jPanel1.add(jLabelLastNames);
+        jLabelLastNames.setBounds(52, 118, 58, 16);
 
         jLabelPetType.setText("Tipo de mascota: ");
+        jPanel1.add(jLabelPetType);
+        jLabelPetType.setBounds(52, 160, 100, 16);
 
         jLabelPetName.setText("Nombre de la Mascota: ");
+        jPanel1.add(jLabelPetName);
+        jLabelPetName.setBounds(52, 207, 133, 16);
 
         jLabelMail.setText("Correo electronico: ");
+        jPanel1.add(jLabelMail);
+        jLabelMail.setBounds(52, 245, 112, 16);
 
         jLabelPhone.setText("Celular: ");
+        jPanel1.add(jLabelPhone);
+        jLabelPhone.setBounds(52, 287, 46, 16);
 
         jLabelDocument.setText("Documento: ");
+        jPanel1.add(jLabelDocument);
+        jLabelDocument.setBounds(52, 329, 71, 16);
 
         jLabelPassword.setText("Contraseña: ");
+        jPanel1.add(jLabelPassword);
+        jLabelPassword.setBounds(52, 371, 72, 16);
+        jPanel1.add(UserName);
+        UserName.setBounds(200, 30, 153, 24);
+        jPanel1.add(jTextFieldNames);
+        jTextFieldNames.setBounds(200, 72, 153, 24);
+        jPanel1.add(jTextFieldLastNames);
+        jTextFieldLastNames.setBounds(200, 114, 153, 24);
+        jPanel1.add(jTextFieldPetName);
+        jTextFieldPetName.setBounds(203, 203, 153, 24);
 
         jComboBoxPetType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel1.add(jComboBoxPetType);
+        jComboBoxPetType.setBounds(203, 155, 150, 26);
+        jPanel1.add(jTextFieldMail);
+        jTextFieldMail.setBounds(203, 245, 153, 24);
+        jPanel1.add(jTextFieldPhone);
+        jTextFieldPhone.setBounds(203, 287, 153, 24);
+        jPanel1.add(jTextFieldDocument);
+        jTextFieldDocument.setBounds(203, 329, 153, 24);
+        jPanel1.add(jTextFieldPasword);
+        jTextFieldPasword.setBounds(203, 371, 153, 24);
 
         BTNLogin.setText("Registrarse");
         BTNLogin.addActionListener(new java.awt.event.ActionListener() {
@@ -76,93 +121,16 @@ public class Register extends javax.swing.JFrame {
                 BTNLoginActionPerformed(evt);
             }
         });
+        jPanel1.add(BTNLogin);
+        BTNLogin.setBounds(190, 413, 97, 32);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelUserName)
-                            .addComponent(jLabelNames)
-                            .addComponent(jLabelLastNames)
-                            .addComponent(jLabelPetType))
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(33, 33, 33)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextFieldLastNames)
-                                    .addComponent(jTextFieldNames)
-                                    .addComponent(UserName)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                                .addComponent(jComboBoxPetType, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap(171, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabelPetName)
-                            .addComponent(jLabelMail)
-                            .addComponent(jLabelPhone)
-                            .addComponent(jLabelDocument)
-                            .addComponent(jLabelPassword))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jTextFieldMail)
-                            .addComponent(jTextFieldPhone)
-                            .addComponent(jTextFieldDocument)
-                            .addComponent(jTextFieldPasword)
-                            .addComponent(jTextFieldPetName, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(190, 190, 190)
-                .addComponent(BTNLogin)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelUserName)
-                    .addComponent(UserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelNames)
-                    .addComponent(jTextFieldNames, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelLastNames)
-                    .addComponent(jTextFieldLastNames, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelPetType)
-                    .addComponent(jComboBoxPetType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabelPetName)
-                    .addComponent(jTextFieldPetName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelMail)
-                    .addComponent(jTextFieldMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelPhone)
-                    .addComponent(jTextFieldPhone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelDocument)
-                    .addComponent(jTextFieldDocument, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelPassword)
-                    .addComponent(jTextFieldPasword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(BTNLogin)
-                .addContainerGap(35, Short.MAX_VALUE))
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Login_wall.jpg"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jLabel1.setMaximumSize(new java.awt.Dimension(480, 480));
+        jLabel1.setMinimumSize(new java.awt.Dimension(480, 480));
+        jLabel1.setPreferredSize(new java.awt.Dimension(480, 480));
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(2, -3, 480, 480);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -223,6 +191,7 @@ public class Register extends javax.swing.JFrame {
     private javax.swing.JButton BTNLogin;
     private javax.swing.JTextField UserName;
     private javax.swing.JComboBox<String> jComboBoxPetType;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelDocument;
     private javax.swing.JLabel jLabelLastNames;
     private javax.swing.JLabel jLabelMail;
