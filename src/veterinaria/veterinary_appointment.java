@@ -57,6 +57,11 @@ public class veterinary_appointment extends javax.swing.JFrame {
         jLabeltreatmentsinfo.setBounds(40, 120, 201, 154);
 
         BTNGenerateInvoice.setText("Programar y Generar factura");
+        BTNGenerateInvoice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTNGenerateInvoiceActionPerformed(evt);
+            }
+        });
         getContentPane().add(BTNGenerateInvoice);
         BTNGenerateInvoice.setBounds(40, 340, 194, 32);
 
@@ -75,6 +80,12 @@ public class veterinary_appointment extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BTNGenerateInvoiceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTNGenerateInvoiceActionPerformed
+        veterinary_appointment app = new veterinary_appointment();
+        app.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_BTNGenerateInvoiceActionPerformed
 
     /**
      * @param args the command line arguments

@@ -71,7 +71,6 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(UserNameText);
         UserNameText.setBounds(160, 140, 130, 20);
 
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Usuario");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(160, 110, 90, 20);
@@ -91,7 +90,10 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void LoginBTNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginBTNActionPerformed
+        veterinary_appointment vete = new veterinary_appointment();
+        vete.setVisible(true);
         
+        this.dispose();
     }//GEN-LAST:event_LoginBTNActionPerformed
 
     private void RegisterLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RegisterLabelMouseClicked
