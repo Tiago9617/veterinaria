@@ -32,9 +32,12 @@ public class veterinary_appointment extends javax.swing.JFrame {
         jComboBoxtreatments = new javax.swing.JComboBox<>();
         jLabeltreatmentsinfo = new javax.swing.JLabel();
         BTNGenerateInvoice = new javax.swing.JButton();
-        BTNSeeAppointment = new javax.swing.JButton();
         jDateChooser2 = new com.toedter.calendar.JDateChooser();
         jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(480, 480));
@@ -64,19 +67,33 @@ public class veterinary_appointment extends javax.swing.JFrame {
         });
         getContentPane().add(BTNGenerateInvoice);
         BTNGenerateInvoice.setBounds(40, 340, 194, 32);
-
-        BTNSeeAppointment.setText("Ver citas programadas");
-        getContentPane().add(BTNSeeAppointment);
-        BTNSeeAppointment.setBounds(250, 340, 161, 32);
         getContentPane().add(jDateChooser2);
         jDateChooser2.setBounds(40, 290, 285, 29);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Login_wall.jpg"))); // NOI18N
-        jLabel1.setMaximumSize(new java.awt.Dimension(480, 480));
-        jLabel1.setMinimumSize(new java.awt.Dimension(480, 480));
-        jLabel1.setPreferredSize(new java.awt.Dimension(480, 480));
         getContentPane().add(jLabel1);
         jLabel1.setBounds(0, 0, 480, 480);
+
+        jMenu2.setText("Historias clinicas");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu2);
+
+        jMenu1.setText("Ver citas programadas");
+        jMenuBar1.add(jMenu1);
+
+        jMenu3.setText("Cerrar sesion");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -86,6 +103,18 @@ public class veterinary_appointment extends javax.swing.JFrame {
         app.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_BTNGenerateInvoiceActionPerformed
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        schedule_appointment app = new schedule_appointment();
+        app.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenu2MouseClicked
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+        Login login = new Login();
+        login.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenu3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -124,12 +153,15 @@ public class veterinary_appointment extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BTNGenerateInvoice;
-    private javax.swing.JButton BTNSeeAppointment;
     private javax.swing.JComboBox<String> jComboBoxtreatments;
     private com.toedter.calendar.JDateChooser jDateChooser2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelPetName;
     private javax.swing.JLabel jLabelUserName;
     private javax.swing.JLabel jLabeltreatmentsinfo;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }

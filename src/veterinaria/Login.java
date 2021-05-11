@@ -5,6 +5,10 @@
  */
 package veterinaria;
 
+import java.awt.Font;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author SantiagoRojasColunge
@@ -16,6 +20,12 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        Password.setText("");
+        
+        TextPrompt_1 placeholder = new TextPrompt_1("Nombre de usuario", UserNameText);
+        
+        TextPrompt_1 placeholder2 = new TextPrompt_1("Contraseña", Password);
+        
     }
 
     /**
@@ -29,10 +39,8 @@ public class Login extends javax.swing.JFrame {
 
         LoginBTN = new javax.swing.JButton();
         RegisterLabel = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
+        Password = new javax.swing.JPasswordField();
         UserNameText = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -61,25 +69,16 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(RegisterLabel);
         RegisterLabel.setBounds(180, 290, 100, 30);
 
-        jPasswordField1.setText("jPasswordField1");
-        getContentPane().add(jPasswordField1);
-        jPasswordField1.setBounds(160, 200, 130, 20);
-
-        jLabel1.setText("Contraseña");
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(160, 170, 130, 20);
+        Password.setText("jPasswordField1");
+        getContentPane().add(Password);
+        Password.setBounds(160, 180, 130, 30);
         getContentPane().add(UserNameText);
-        UserNameText.setBounds(160, 140, 130, 20);
-
-        jLabel2.setText("Usuario");
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(160, 110, 90, 20);
+        UserNameText.setBounds(160, 120, 130, 30);
 
         jLabel4.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
         jLabel4.setText("BIENVENIDO");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(160, 80, 180, 14);
-        jLabel4.getAccessibleContext().setAccessibleParent(jLabel2);
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Login_wall.jpg"))); // NOI18N
         jLabel3.setName(""); // NOI18N
@@ -139,12 +138,10 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton LoginBTN;
+    private javax.swing.JPasswordField Password;
     private javax.swing.JLabel RegisterLabel;
     private javax.swing.JTextField UserNameText;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JPasswordField jPasswordField1;
     // End of variables declaration//GEN-END:variables
 }

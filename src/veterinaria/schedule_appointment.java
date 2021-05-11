@@ -27,21 +27,82 @@ public class schedule_appointment extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(480, 480));
+        setMinimumSize(new java.awt.Dimension(480, 480));
+        setPreferredSize(new java.awt.Dimension(480, 480));
+        setSize(new java.awt.Dimension(480, 480));
+        getContentPane().setLayout(null);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        getContentPane().add(jComboBox1);
+        jComboBox1.setBounds(20, 20, 250, 26);
+
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(20, 60, 240, 210);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Login_wall.jpg"))); // NOI18N
+        jLabel1.setMaximumSize(new java.awt.Dimension(480, 480));
+        jLabel1.setMinimumSize(new java.awt.Dimension(480, 480));
+        jLabel1.setPreferredSize(new java.awt.Dimension(480, 480));
+        getContentPane().add(jLabel1);
+        jLabel1.setBounds(0, 0, 480, 450);
+
+        jMenu1.setText("Programar Citas");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Historias clinicas");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("Cerrar sesion");
+        jMenu3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu3MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu3);
+
+        setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        veterinary_appointment app = new veterinary_appointment();
+        app.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenu1MouseClicked
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        schedule_appointment app = new schedule_appointment();
+        app.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenu2MouseClicked
+
+    private void jMenu3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu3MouseClicked
+        Login login = new Login();
+        login.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jMenu3MouseClicked
 
     /**
      * @param args the command line arguments
@@ -79,5 +140,12 @@ public class schedule_appointment extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
 }
